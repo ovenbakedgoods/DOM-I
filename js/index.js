@@ -51,11 +51,13 @@ const button = document.getElementsByTagName("button")[0];
 button.textContent = siteContent["cta"]["button"];
 
 const anchortags = document.querySelectorAll('a');
+//anchortags.style.color = "green";
 let i = 0;
 //anchortags.forEach(a => a.textContent = siteContent["nav"]["nav-item-" + i], i++);
 for(let j = 1; j < 7; j++)
 {
   anchortags[i].textContent = siteContent["nav"]["nav-item-" + j];
+  anchortags[i].style.color = "green"
   i++;
 }
 
@@ -123,6 +125,12 @@ footer.textContent = siteContent["footer"]["copyright"];
 
 
 
+let element = document.createElement("a");                 
+var textnode = document.createTextNode("home");         
+node.appendChild(textnode);   
 
+
+let container = document.querySelector('.container');
+container.prepend('prepend() just checking');
 
 
